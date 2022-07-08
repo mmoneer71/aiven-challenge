@@ -1,0 +1,6 @@
+SASL_MECHANISM = "SCRAM-SHA-512"
+SEC_PROTOCOL = "SASL_SSL"
+KAFKA_TOPIC = "aiven_challenge"
+OFFSET_RESET = "earliest"
+CLIENT_ID = "aiven-challenge-consumer-1"
+GROUP_ID = "aiven-challenge-group"
