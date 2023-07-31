@@ -1,5 +1,11 @@
 # Aiven Challenge
 
+## Overview
+Simple demo producer/consumer application using Python and Kafka. The producer accepts data through a REST API and publishes to the Kafka queue, the consumer then consumes the data from the queue and logs it into a PostgreSQL database.
+
+Tech Stack: Python, FastAPI, PostgreSQL, SQLAlchemy, Kafka, Aiven tools for hosting
+
+## Running instructions
 
 The solution has been written and tested with Python version 3.8.10.
 
@@ -54,7 +60,7 @@ Please make sure there are no queued messages before running the tests to avoid 
 After setting up the project and running both components, you can send a POST request to the producer which will send a single message to Kafka (more details in the Swagger docs). The consumer will then pick the message up and add it to the database.
 
 
-### Setting up the database
+## Setting up the database
 
 These steps are already done, and only written here for clarification:
 
@@ -62,7 +68,7 @@ First, the database `assignment` was created through the Aiven PostgreSQL consol
 Second, the alembic migrations are run as follows: `alembic upgrade head` which will create the tables as per the spec in `db_models.py` and the migrations revision.
 
 
-### Discussion
+## Discussion
 
 Normally, the tests would run in a separate env/database, however, for the sake of the assignment/demo only they are running on the same database.
 
